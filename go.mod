@@ -1,4 +1,4 @@
-module github.com/n-wen/structmodel
+module github.com/n-wen/structify
 
 go 1.14
 
