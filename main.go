@@ -67,7 +67,7 @@ func main() {
 			panic(err.Error())
 		}
 		cols = append(cols, col)
-		p.Add(BigCamelMarshal(col.Field), getTypeName(col.Type, false), fmt.Sprintf("`\"%v\":%v`", tag, col.Field),
+		p.Add(BigCamelMarshal(col.Field), getTypeName(col.Type, false), fmt.Sprintf("`%v:\"%v\"`", tag, col.Field),
 			fmt.Sprintf(" // %v", col.Comment))
 	}
 	p.Add("}")
