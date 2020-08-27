@@ -10,6 +10,10 @@ func BigCamelMarshal(name string) string {
 	temp := strings.Split(name, "_")
 	var s string
 	for _, v := range temp {
+		if v == "id" {
+			s += "ID"
+			continue
+		}
 		vv := []rune(v)
 		if len(vv) > 0 {
 			if bool(vv[0] >= 'a' && vv[0] <= 'z') { //首字母大写
